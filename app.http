@@ -1,0 +1,87 @@
+
+GET http://localhost:3000/todos/
+
+###
+
+#1
+GET http://localhost:3000/todos/?status=TO%20DO
+
+###
+
+#2
+GET http://localhost:3000/todos/?priority=HIGH
+
+###
+
+#3
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+###
+
+#4
+GET http://localhost:3000/todos/?search_q=Buy
+
+###
+
+#5
+GET http://localhost:3000/todos/?category=WORK&status=DONE
+
+###
+
+#6
+GET http://localhost:3000/todos/?category=HOME
+
+###
+
+#7
+GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+
+###
+
+
+GET http://localhost:3000/todos/?date=2021-21-1
+
+###
+
+GET http://localhost:3000/todos/7/
+
+###
+
+
+GET http://localhost:3000/agenda/?date=2021-04-04
+
+###
+
+GET http://localhost:3000/
+
+###
+
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 13,
+  "todo": "some",
+  "priority": "LOW",
+  "status": "TO DO",
+  "category": "HOME",
+  "dueDate": "2021-2-22"
+}
+###
+
+
+GET http://localhost:3000/todos/7/
+
+###
+
+PUT http://localhost:3000/todos/7/
+Content-Type: application/json
+
+{
+    "category": "LEARNING"
+}
+###
+
+DELETE  http://localhost:3000/todos/7/
+
+###
